@@ -1,6 +1,6 @@
 # 1. NVIDIA CUDA Devel 이미지를 베이스로 사용 (컴파일이 필요한 라이브러리 대응용)
 # PyTorch 1.6과 호환되는 CUDA 10.2 버전을 선택했습니다.
-FROM nvidia/cuda:10.2-devel-ubuntu18.04
+FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
 
 # 2. 시스템 기본 도구 설치 (Miniconda 설치 및 소스 관리용)
 RUN apt-get update && apt-get install -y --no-install-recommends \
