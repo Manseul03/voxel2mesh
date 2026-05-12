@@ -34,7 +34,7 @@ RUN conda env create -f environment.yaml
 SHELL ["conda", "run", "-n", "v2m_env", "/bin/bash", "-c"]
 
 # 8. 프로젝트 소스 복사
-COPY /app/voxel2mesh .
+COPY . .
 
 # 9. 컨테이너 실행 시 기본 실행 명령어 (v2m_env 환경에서 실행)
 ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "v2m_env", "python", "train.py"]
